@@ -1,0 +1,57 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>我的 CI/CD 加法器</title>
+  <style>
+    body {
+      max-width: 640px;
+      margin: 60px auto;
+      padding: 0 20px;
+      font-family: Arial, sans-serif;
+      line-height: 1.6;
+    }
+
+    form {
+      display: grid;
+      gap: 16px;
+      margin: 24px 0;
+    }
+
+    input,
+    button {
+      padding: 10px;
+      font-size: 16px;
+    }
+
+    #result {
+      padding: 16px;
+      background: #eef6ff;
+      font-weight: bold;
+    }
+  </style>
+</head>
+<body>
+  <h1>我的 CI/CD 加法器</h1>
+  <p>这个网页会通过 GitHub Actions 自动测试并部署。</p>
+
+  <form id="calculator">
+    <label>
+      数字 A
+      <input id="number-a" type="number" value="2" required>
+    </label>
+
+    <label>
+      数字 B
+      <input id="number-b" type="number" value="3" required>
+    </label>
+
+    <button type="submit">计算</button>
+  </form>
+
+  <p id="result">计算结果会显示在这里</p>
+
+  <script type="module" src="./src/app.js"></script>
+</body>
+</html>
